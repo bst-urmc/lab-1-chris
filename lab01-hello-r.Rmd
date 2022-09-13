@@ -99,9 +99,35 @@ CK: Exercise 2 code chunks above generates scatterplot of y vs x in dino dataset
 
 3. Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
+```{r fig.fullwidth=TRUE}
+star_data = datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+```{r}
+star_data %>%
+  summarize(r = cor(x, y))
+```
+
+CK: The correlation coefficient of the star dataset is similar to that of the dino dataset.
+
 *This is another good place to pause, commit changes with the commit message "Added answer for Ex 3", and push.*
 
 4. Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
+
+```{r fig.fullwidth=TRUE}
+star_data = datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+```{r}
+dino_data %>%
+  summarize(r = cor(x, y))
+```
 
 *You should pause again, commit changes with the commit message "Added answer for Ex 4", and push.*
 
