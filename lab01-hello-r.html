@@ -330,17 +330,19 @@ correlation coefficient between <code>x</code> and <code>y</code> for
 this dataset. How does this value compare to the <code>r</code> of
 <code>dino</code>?</li>
 </ol>
-<pre class="r"><code>star_data = datasaurus_dozen %&gt;%
-  filter(dataset == &quot;star&quot;)
-ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+<pre class="r"><code>circle_data = datasaurus_dozen %&gt;%
+  filter(dataset == &quot;circle&quot;)
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point()</code></pre>
 <p><img src="lab01-hello-r_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<pre class="r"><code>dino_data %&gt;%
+<pre class="r"><code>circle_data %&gt;%
   summarize(r = cor(x, y))</code></pre>
 <pre><code>## # A tibble: 1 × 1
 ##         r
 ##     &lt;dbl&gt;
-## 1 -0.0645</code></pre>
+## 1 -0.0683</code></pre>
+<p>CK: The correlation coefficient of the circle dataset is similar to
+that of the dino dataset.</p>
 <p><em>You should pause again, commit changes with the commit message
 “Added answer for Ex 4”, and push.</em></p>
 <pre class="marginfigure"><code>Facet by the dataset variable, placing the plots in a 3 column grid, and don&#39;t add a legend.</code></pre>

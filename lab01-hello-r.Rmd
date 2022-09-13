@@ -118,16 +118,18 @@ CK: The correlation coefficient of the star dataset is similar to that of the di
 4. Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
 ```{r fig.fullwidth=TRUE}
-star_data = datasaurus_dozen %>%
-  filter(dataset == "star")
-ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+circle_data = datasaurus_dozen %>%
+  filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
 ```{r}
-dino_data %>%
+circle_data %>%
   summarize(r = cor(x, y))
 ```
+
+CK: The correlation coefficient of the circle dataset is similar to that of the dino dataset.
 
 *You should pause again, commit changes with the commit message "Added answer for Ex 4", and push.*
 
