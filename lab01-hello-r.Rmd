@@ -93,6 +93,8 @@ dino_data %>%
   summarize(r = cor(x, y))
 ```
 
+CK: Exercise 2 code chunks above generates scatterplot of y vs x in dino dataset and calculates the correlation coefficient to be -0.0645.
+
 *This is a good place to pause, commit changes with the commit message "Added answer for Ex 2", and push.*
 
 3. Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
